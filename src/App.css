@@ -1,0 +1,22 @@
+/* @import 'animate.css';
+@import '~loaders.css/src/animations/pacman.scss'; */
+
+@font-face {
+  font-family: 'Inter Regular';
+  src: url('./assets/fonts/Inter-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter Regular';
+  src: url('./assets/fonts/Inter-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gilroy Light';
+  src: url('./assets/fonts/Gilroy-Light.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cour';
+  src: url('./assets/fonts/cour.ttf') format('truetype');
+}
