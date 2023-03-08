@@ -95,9 +95,9 @@ const About = () => {
             </Fade>
           </Wrapper>
         </Content>
-        <Fade>
-          <ExperienceTimeline />
-        </Fade>
+        {/* <Fade>
+        <ExperienceTimeline />
+        </Fade> */}
       </Container>
     </>
   )

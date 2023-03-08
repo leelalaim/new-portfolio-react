@@ -1,11 +1,9 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 
 import {
   Drawer,
   DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
@@ -45,8 +43,8 @@ const SizeExample = () => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton padding={6} />
-          <DrawerHeader backgroundColor="#363033"></DrawerHeader>
-          <DrawerBody backgroundColor="#363033">
+          <DrawerHeader backgroundColor="#232323"></DrawerHeader>
+          <DrawerBody backgroundColor="#232323">
             <Box
               display="flex"
               flexDirection="column"

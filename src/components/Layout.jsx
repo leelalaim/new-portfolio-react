@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import NavBar from '../NavBar'
-import Drawer from '../Drawer'
+import NavBar from './NavBar'
+import Drawer from './Drawer'
 
 const Layout = () => {
   const [isMobile, setIsMobile] = useState(false)

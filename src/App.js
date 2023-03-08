@@ -10,7 +10,7 @@ import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 
 const theme = extendTheme({
   styles: {
-    global: (props: StyleFunctionProps) => ({
+    global: () => ({
       body: {
         color: '#ffffff',
         bg: '#1f1f1f',
