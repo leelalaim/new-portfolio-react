@@ -1,13 +1,16 @@
 import styled from 'styled-components'
 import { ReactComponent as YellowLineHorizontal } from '../assets/images/YellowLineHorizontal.svg'
 import ProfilePic from '../assets/images/prof-pic.jpg'
-import SocialMedia from './SocialMedia'
+import Fade from 'react-reveal/Fade'
+import ExperienceTimeline from '../components/Timeline'
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 18px 54px 0;
+  padding: 18px 40px;
+  margin-bottom: 24px;
   @media (min-width: 768px) {
+    padding: 18px 64px;
     max-width: 1440px;
     margin: 0 auto;
   }
@@ -16,23 +19,28 @@ const Container = styled.div`
 const Content = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 8px;
+  margin-bottom: 24px;
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: center;
   }
 `
 const Wrapper = styled.div`
+  text-align: center;
   @media (min-width: 768px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 443px;
+    text-align: left;
   }
 `
 
 const Intro = styled.div`
-  font-size: 20px;
+  font-size: 14px;
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
 `
 
 const StyledLine = styled(YellowLineHorizontal)`
@@ -54,7 +62,7 @@ const ProfileImage = styled.img`
   width: 100%;
 
   @media (min-width: 768px) {
-    height: 610px;
+    height: 550px;
   }
 `
 
@@ -63,26 +71,33 @@ const About = () => {
     <>
       <Container>
         <Content>
-          <ProfileImageWrapper>
-            <ProfileImage src={ProfilePic} alt="profile" />
-          </ProfileImageWrapper>
+          <Fade>
+            <ProfileImageWrapper>
+              <ProfileImage src={ProfilePic} alt="profile" />
+            </ProfileImageWrapper>
+          </Fade>
+
           <Wrapper>
-            <Intro>
-              Highly motivated and goal driven Frontend Developer with a strong
-              passion for React. Latest developer experience include working at
-              a HealthTech company and a graduate from Technigo - a fast-paced
-              Frontend development bootcamp.
-              <br />I have a strong interest in technology, I am an analytical
-              minded and creative person. Enjoy being challenged and
-              continuously developing my skills by dedicating my time to
-              learning.
-            </Intro>
-            <div style={{ marginTop: '18px' }}>
-              <StyledLine />
-            </div>
+            <Fade right>
+              <Intro>
+                Highly motivated and goal driven Frontend Developer with a
+                strong passion for React. Latest developer experience include
+                working at a HealthTech company and a graduate from Technigo - a
+                fast-paced Frontend development bootcamp.
+                <br />I have a strong interest in technology, I am an analytical
+                minded and creative person. Enjoy being challenged and
+                continuously developing my skills by dedicating my time to
+                learning.
+              </Intro>
+              <div style={{ marginTop: '18px' }}>
+                <StyledLine />
+              </div>
+            </Fade>
           </Wrapper>
         </Content>
-        <SocialMedia />
+        <Fade>
+          <ExperienceTimeline />
+        </Fade>
       </Container>
     </>
   )

@@ -14,14 +14,14 @@ const SocialMedia = () => {
         <a
           target="_blank"
           rel="noreferrer"
-          href=""
+          href="https://www.linkedin.com/in/laimaduhovnaja/"
           style={{ marginRight: '16px' }}
         >
           <FontAwesomeIcon icon={faLinkedin} color="#ffffff" size="2x" />
         </a>
       </li>
       <li>
-        <a target="_blank" rel="noreferrer" href="">
+        <a target="_blank" rel="noreferrer" href="https://github.com/leelalaim">
           <FontAwesomeIcon icon={faGithub} color="#ffffff" size="2x" />
         </a>
       </li>

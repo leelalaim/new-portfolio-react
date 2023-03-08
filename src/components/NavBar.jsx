@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import SocialMedia from './SocialMedia'
-import { Link, NavLink } from 'react-router-dom'
+
+import { Link } from 'react-router-dom'
 
 const Nav = styled.nav`
   font-family: 'Inter Regular';
@@ -43,7 +43,7 @@ export const NavBar = () => {
       <List>
         {Navigation.map((item) => {
           return (
-            <ListItem>
+            <ListItem key={`nav-${item.page}`}>
               <StyledLink to={item.link}>{item.page}</StyledLink>
             </ListItem>
           )

@@ -1,7 +1,7 @@
 import './App.css'
 import './assets/fonts/Inter-Regular.ttf'
 import { Route, Routes } from 'react-router-dom'
-import Layout from './components/Layout/Layout'
+import Layout from './components/Layout'
 import Main from './components/Main'
 // import Home from './components/Home/Home'
 import About from './components/About'
