@@ -1,10 +1,6 @@
-import Timeline from '@mui/lab/Timeline'
-import TimelineItem from '@mui/lab/TimelineItem'
-import TimelineSeparator from '@mui/lab/TimelineSeparator'
-import TimelineConnector from '@mui/lab/TimelineConnector'
-import TimelineContent from '@mui/lab/TimelineContent'
-import TimelineDot from '@mui/lab/TimelineDot'
-import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent'
+import { TriangleUpIcon } from '@chakra-ui/icons'
+import styled from 'styled-components'
+import { List, ListItem } from '@chakra-ui/react'
 
 const history = [
   { year: '2023/01', position: 'Frontend Developer (HiQ)' },
@@ -20,37 +16,39 @@ const history = [
     position: 'BSc Renewable Energy Systems (University of South Wales)',
   },
 ]
+
+const StyledList = styled(List)`
+  border: 1px solid #e7c039;
+  width: fit-content;
+  padding: 14px;
+  margin-bottom: 24px;
+  @media (min-width: 768px) {
+    margin-bottom: 0px;
+  }
+`
+
+const StyledListItem = styled(ListItem)`
+  font-size: 14px;
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
+`
+
 const ExperienceTimeline = () => {
   return (
-    <div
-      style={{
-        border: '1px solid #E7C039',
-      }}
-    >
-      <h1
-        style={{
-          textAlign: 'center',
-        }}
-      >
-        Timeline
-      </h1>
-      <Timeline>
-        {history.map((item) => (
-          <TimelineItem key={`item-${item.position}`}>
-            <TimelineOppositeContent fontSize="12px" fontFamily="Inter Regular">
-              {item.year}
-            </TimelineOppositeContent>
-            <TimelineSeparator>
-              <TimelineDot />
-              <TimelineConnector />
-            </TimelineSeparator>
-            <TimelineContent fontSize="14px" fontFamily="Inter Regular">
-              {item.position}
-            </TimelineContent>
-          </TimelineItem>
-        ))}
-      </Timeline>
-    </div>
+    <StyledList>
+      {history.map((el) => (
+        <StyledListItem mb={4}>
+          <div>
+            <TriangleUpIcon color="#E7C039" mr={2} />
+            <span style={{ color: '#E7C039', marginRight: '6px' }}>
+              {el.year}
+            </span>
+            {el.position}
+          </div>
+        </StyledListItem>
+      ))}
+    </StyledList>
   )
 }
 export default ExperienceTimeline
