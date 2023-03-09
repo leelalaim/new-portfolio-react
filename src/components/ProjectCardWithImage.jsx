@@ -12,11 +12,13 @@ import { Icon } from '@chakra-ui/react'
 import { FaGithub } from 'react-icons/fa'
 import { TechCard } from './TechCard'
 
-const ProjectCard = ({ image, name, allStackUsed, description }) => {
+const ProjectCard = ({ image, name, allStackUsed, description, link }) => {
   return (
     <Card maxW="300px" bg="#1f1f1f" mb={5}>
-      <Image objectFit="cover" src={image} alt="Chakra UI" height="300px" />
-      <CardHeader p={2}>
+      {image && (
+        <Image objectFit="cover" src={image} alt="Chakra UI" height="300px" />
+      )}
+      <CardHeader p={0} mb={2}>
         <Flex flex="1" gap="4" alignItems="center" flexWrap="wrap">
           <Box>
             <Heading size="sm" py={3} color="#ffffff">
@@ -28,11 +30,13 @@ const ProjectCard = ({ image, name, allStackUsed, description }) => {
           </Box>
         </Flex>
       </CardHeader>
-      <CardBody p={2}>
+      <CardBody p={0}>
         <Text pb={4} color="#ffffff">
           {description}
         </Text>
-        <Icon as={FaGithub} color="#ffffff" boxSize={6} />
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          <Icon as={FaGithub} color="#ffffff" boxSize={6} />
+        </a>
       </CardBody>
     </Card>
   )
