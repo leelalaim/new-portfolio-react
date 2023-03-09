@@ -20,9 +20,11 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 24px;
+
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 64px;
   }
 `
 const Wrapper = styled.div`
@@ -43,6 +45,12 @@ const Intro = styled.div`
   }
 `
 
+const StyledLineWrapper = styled.div`
+  margin: 24px 0;
+  display: flex;
+  justify-content: center;
+`
+
 const StyledLine = styled(YellowLineHorizontal)`
   width: 100px;
 `
@@ -53,6 +61,13 @@ const ProfileImageWrapper = styled.div`
   padding: 0 32px;
   @media (min-width: 768px) {
     padding: 0 114px 0 0;
+    margin-bottom: 0;
+  }
+`
+
+const SecondPictureWrapper = styled(ProfileImageWrapper)`
+  @media (min-width: 768px) {
+    padding: 0 0 0 114px;
     margin-bottom: 0;
   }
 `
@@ -89,15 +104,28 @@ const About = () => {
                 continuously developing my skills by dedicating my time to
                 learning.
               </Intro>
-              <div style={{ marginTop: '18px' }}>
+              <StyledLineWrapper>
                 <StyledLine />
-              </div>
+              </StyledLineWrapper>
             </Fade>
           </Wrapper>
         </Content>
-        {/* <Fade>
-        <ExperienceTimeline />
-        </Fade> */}
+
+        <Content>
+          <Wrapper>
+            <Fade left>
+              <ExperienceTimeline />
+              <StyledLineWrapper>
+                <StyledLine />
+              </StyledLineWrapper>
+            </Fade>
+          </Wrapper>
+          <Fade>
+            <SecondPictureWrapper>
+              <ProfileImage src={ProfilePic} alt="profile" />
+            </SecondPictureWrapper>
+          </Fade>
+        </Content>
       </Container>
     </>
   )
