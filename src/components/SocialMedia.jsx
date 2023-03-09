@@ -1,5 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { Icon } from '@chakra-ui/react'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import styled from 'styled-components'
 
 const SocialMediaWrapper = styled.ul`
@@ -17,12 +17,12 @@ const SocialMedia = () => {
           href="https://www.linkedin.com/in/laimaduhovnaja/"
           style={{ marginRight: '16px' }}
         >
-          <FontAwesomeIcon icon={faLinkedin} color="#ffffff" size="2x" />
+          <Icon as={FaGithub} boxSize={6} _hover={{ color: '#E7C039' }} />
         </a>
       </li>
       <li>
         <a target="_blank" rel="noreferrer" href="https://github.com/leelalaim">
-          <FontAwesomeIcon icon={faGithub} color="#ffffff" size="2x" />
+          <Icon as={FaLinkedin} boxSize={6} _hover={{ color: '#E7C039' }} />
         </a>
       </li>
     </SocialMediaWrapper>
