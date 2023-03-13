@@ -4,7 +4,6 @@ import ProfilePic from '../assets/images/prof-pic.jpg'
 import Fade from 'react-reveal/Fade'
 import ExperienceTimeline from '../components/Timeline'
 import Skills from '../components/Skills'
-import { Text } from '@chakra-ui/react'
 
 const Container = styled.div`
   display: flex;
@@ -12,7 +11,7 @@ const Container = styled.div`
   padding: 18px 40px;
   margin-bottom: 24px;
   @media (min-width: 768px) {
-    padding: 18px 64px;
+    padding: 96px 64px;
     max-width: 1220px;
     margin: 0 auto;
   }
@@ -49,32 +48,17 @@ const StyledLineWrapper = styled.div`
   justify-content: center;
 `
 
-const TimelineWrapper = styled.div`
-  // display: 'flex',
-  // justify-content: 'center',
-  // margin-bottom: '64px',
-  // @media (min-width: 768px) {
-  // margin-bottom: '64px',
-  // }
-`
-
 const StyledLine = styled(YellowLineHorizontal)`
   width: 100px;
 `
 
-const ProfileImageWrapper = styled.div`
+const ImageWrapper = styled.div`
   text-align: center;
   margin-bottom: 24px;
   padding: 0 32px;
   @media (min-width: 768px) {
     padding: 0 114px 0 0;
     margin-bottom: 0;
-  }
-`
-
-const SecondPictureWrapper = styled(ProfileImageWrapper)`
-  @media (min-width: 768px) {
-    // margin-bottom: 0;
   }
 `
 
@@ -101,9 +85,9 @@ const About = () => {
       <Container>
         <Content>
           <Fade>
-            <ProfileImageWrapper>
+            <ImageWrapper>
               <ProfileImage src={ProfilePic} alt="profile" />
-            </ProfileImageWrapper>
+            </ImageWrapper>
           </Fade>
 
           <Wrapper>
@@ -125,9 +109,9 @@ const About = () => {
           </Wrapper>
         </Content>
 
-        <TimelineWrapper>
+        <div>
           <ExperienceTimeline />
-        </TimelineWrapper>
+        </div>
 
         <Content>
           <Wrapper>
@@ -139,9 +123,9 @@ const About = () => {
             </Fade>
           </Wrapper>
           <Fade>
-            <SecondPictureWrapper>
+            <ImageWrapper>
               <SecondImage src={ProfilePic} alt="profile" />
-            </SecondPictureWrapper>
+            </ImageWrapper>
           </Fade>
         </Content>
       </Container>

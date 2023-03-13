@@ -11,8 +11,6 @@ import styled from 'styled-components'
 import { ReactComponent as YellowLineHorizontal } from '../assets/images/YellowLineHorizontal.svg'
 import Fade from 'react-reveal/Fade'
 
-import { Wrap, WrapItem, Center } from '@chakra-ui/react'
-
 const Container = styled.div`
   display: flex;
   flex-direction: column;
