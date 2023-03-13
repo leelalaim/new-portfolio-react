@@ -4,12 +4,41 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter } from 'react-router-dom'
+import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+
+const theme = extendTheme({
+  styles: {
+    global: () => ({
+      [`@media (min-width: 768px)`]: {
+        body: {
+          bg: '#1f1f1f',
+          fontSize: '24px',
+          fontFamily: 'Gilroy Light',
+        },
+      },
+      body: {
+        color: '#ffffff',
+        bg: '#1f1f1f',
+        fontSize: '16px',
+      },
+    }),
+  },
+  components: {
+    DrawerBody: {
+      color: '#1f1f1f',
+    },
+  },
+})
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <React.StrictMode>
+    <BrowserRouter>
+      <ChakraProvider theme={theme}>
+        <App />
+      </ChakraProvider>
+    </BrowserRouter>
+  </React.StrictMode>
 )
 
 // If you want to start measuring performance in your app, pass a function
