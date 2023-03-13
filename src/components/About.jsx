@@ -3,6 +3,8 @@ import { ReactComponent as YellowLineHorizontal } from '../assets/images/YellowL
 import ProfilePic from '../assets/images/prof-pic.jpg'
 import Fade from 'react-reveal/Fade'
 import ExperienceTimeline from '../components/Timeline'
+import Skills from '../components/Skills'
+import { Text } from '@chakra-ui/react'
 
 const Container = styled.div`
   display: flex;
@@ -11,7 +13,7 @@ const Container = styled.div`
   margin-bottom: 24px;
   @media (min-width: 768px) {
     padding: 18px 64px;
-    max-width: 1440px;
+    max-width: 1220px;
     margin: 0 auto;
   }
 `
@@ -25,6 +27,7 @@ const Content = styled.div`
     flex-direction: row;
     justify-content: center;
     margin-bottom: 64px;
+    align-items: center;
   }
 `
 const Wrapper = styled.div`
@@ -38,17 +41,21 @@ const Wrapper = styled.div`
   }
 `
 
-const Intro = styled.div`
-  font-size: 14px;
-  @media (min-width: 768px) {
-    font-size: 20px;
-  }
-`
+const Intro = styled.div``
 
 const StyledLineWrapper = styled.div`
   margin: 24px 0;
   display: flex;
   justify-content: center;
+`
+
+const TimelineWrapper = styled.div`
+  // display: 'flex',
+  // justify-content: 'center',
+  // margin-bottom: '64px',
+  // @media (min-width: 768px) {
+  // margin-bottom: '64px',
+  // }
 `
 
 const StyledLine = styled(YellowLineHorizontal)`
@@ -67,8 +74,7 @@ const ProfileImageWrapper = styled.div`
 
 const SecondPictureWrapper = styled(ProfileImageWrapper)`
   @media (min-width: 768px) {
-    padding: 0 0 0 114px;
-    margin-bottom: 0;
+    // margin-bottom: 0;
   }
 `
 
@@ -78,6 +84,14 @@ const ProfileImage = styled.img`
 
   @media (min-width: 768px) {
     height: 550px;
+  }
+`
+
+const SecondImage = styled.img`
+  object-fit: cover;
+  @media (min-width: 768px) {
+    height: 550px;
+    width: 550px;
   }
 `
 
@@ -111,10 +125,14 @@ const About = () => {
           </Wrapper>
         </Content>
 
+        <TimelineWrapper>
+          <ExperienceTimeline />
+        </TimelineWrapper>
+
         <Content>
           <Wrapper>
             <Fade left>
-              <ExperienceTimeline />
+              <Skills />
               <StyledLineWrapper>
                 <StyledLine />
               </StyledLineWrapper>
@@ -122,7 +140,7 @@ const About = () => {
           </Wrapper>
           <Fade>
             <SecondPictureWrapper>
-              <ProfileImage src={ProfilePic} alt="profile" />
+              <SecondImage src={ProfilePic} alt="profile" />
             </SecondPictureWrapper>
           </Fade>
         </Content>

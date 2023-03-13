@@ -1,19 +1,26 @@
-import './App.css'
-import './assets/fonts/Inter-Regular.ttf'
 import { Route, Routes } from 'react-router-dom'
+import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import Layout from './components/Layout'
 import Main from './components/Main'
-// import Home from './components/Home/Home'
 import About from './components/About'
 import Projects from './components/Projects'
-import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+import './App.css'
+import './assets/fonts/Inter-Regular.ttf'
 
 const theme = extendTheme({
   styles: {
     global: () => ({
+      [`@media (min-width: 768px)`]: {
+        body: {
+          bg: '#1f1f1f',
+          fontSize: '24px',
+          fontFamily: 'Gilroy Light',
+        },
+      },
       body: {
         color: '#ffffff',
         bg: '#1f1f1f',
+        fontSize: '16px',
       },
     }),
   },

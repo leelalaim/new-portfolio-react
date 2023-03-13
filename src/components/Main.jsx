@@ -43,6 +43,11 @@ const StyledLine = styled(YellowLine)`
   height: 70px;
 `
 
+const Wrapper = styled.div`
+  display: 'flex';
+  alignitems: 'flex-end';
+`
+
 const Main = () => {
   return (
     <Container>
@@ -54,10 +59,10 @@ const Main = () => {
           </Name>
         </Fade>
         <Fade bottom>
-          <div style={{ display: 'flex', alignItems: 'flex-end' }}>
+          <Wrapper>
             <StyledLine />
             <Developer>frontend developer</Developer>
-          </div>
+          </Wrapper>
         </Fade>
       </Content>
       <SocialMedia />

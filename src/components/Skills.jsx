@@ -18,34 +18,46 @@ const history = [
 ]
 
 const StyledList = styled(List)`
-  border: 1px solid #e7c039;
   width: 100%;
   padding: 14px;
-  margin-bottom: 36px;
+  margin-bottom: 24px;
+  text-align: center;
   @media (min-width: 768px) {
-    margin-bottom: 64px;
+    margin-bottom: 0px;
     padding: 24px 96px;
     width: fit-content;
   }
 `
 
-const StyledListItem = styled(ListItem)``
+const Heading = styled.h1`
+  color: #e7c039;
+  font-weight: 500;
+  margin-bottom: 20px;
+`
 
-const ExperienceTimeline = () => {
+const techSkills = [
+  'Typescript',
+  'React',
+  'Next.js',
+  'E2E Testing (Playwright + Cucumber)',
+  'Unit Testing (Jest & React Testing Library',
+  'Styled Components',
+  'JavaScript ES6',
+  'HTML5',
+  'CSS3',
+  'Redux',
+  'Node.js',
+  'Express',
+]
+
+const Skills = () => {
   return (
     <StyledList>
-      {history.map((el) => (
-        <StyledListItem mb={4} justify="center" width="fit-content">
-          <div>
-            <TriangleUpIcon color="#E7C039" mr={2} />
-            <span style={{ color: '#E7C039', marginRight: '6px' }}>
-              {el.year}
-            </span>
-            {el.position}
-          </div>
-        </StyledListItem>
+      <Heading>TECH SKILLS</Heading>
+      {techSkills.map((skill) => (
+        <p>{skill}</p>
       ))}
     </StyledList>
   )
 }
-export default ExperienceTimeline
+export default Skills
