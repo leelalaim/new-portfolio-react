@@ -1,4 +1,0 @@
-# how it should build the JavaScript assets to deploy from.
-[build]
-  publish = "build/"
-  command = "npm run build"
