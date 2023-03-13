@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { ReactComponent as YellowLineHorizontal } from '../assets/images/YellowLineHorizontal.svg'
 import ProfilePic from '../assets/images/prof-pic.jpg'
-import Fade from 'react-reveal/Fade'
+// import Fade from 'react-reveal/Fade'
 import ExperienceTimeline from '../components/Timeline'
 import Skills from '../components/Skills'
 
@@ -84,28 +84,28 @@ const About = () => {
     <>
       <Container>
         <Content>
-          <Fade>
-            <ImageWrapper>
-              <ProfileImage src={ProfilePic} alt="profile" />
-            </ImageWrapper>
-          </Fade>
+          {/* <Fade> */}
+          <ImageWrapper>
+            <ProfileImage src={ProfilePic} alt="profile" />
+          </ImageWrapper>
+          {/* </Fade> */}
 
           <Wrapper>
-            <Fade right>
-              <Intro>
-                Highly motivated and goal driven Frontend Developer with a
-                strong passion for React. Latest developer experience include
-                working at a HealthTech company and a graduate from Technigo - a
-                fast-paced Frontend development bootcamp.
-                <br />I have a strong interest in technology, I am an analytical
-                minded and creative person. Enjoy being challenged and
-                continuously developing my skills by dedicating my time to
-                learning.
-              </Intro>
-              <StyledLineWrapper>
-                <StyledLine />
-              </StyledLineWrapper>
-            </Fade>
+            {/* <Fade right> */}
+            <Intro>
+              Highly motivated and goal driven Frontend Developer with a strong
+              passion for React. Latest developer experience include working at
+              a HealthTech company and a graduate from Technigo - a fast-paced
+              Frontend development bootcamp.
+              <br />I have a strong interest in technology, I am an analytical
+              minded and creative person. Enjoy being challenged and
+              continuously developing my skills by dedicating my time to
+              learning.
+            </Intro>
+            <StyledLineWrapper>
+              <StyledLine />
+            </StyledLineWrapper>
+            {/* </Fade> */}
           </Wrapper>
         </Content>
 
@@ -115,18 +115,18 @@ const About = () => {
 
         <Content>
           <Wrapper>
-            <Fade left>
-              <Skills />
-              <StyledLineWrapper>
-                <StyledLine />
-              </StyledLineWrapper>
-            </Fade>
+            {/* <Fade left> */}
+            <Skills />
+            <StyledLineWrapper>
+              <StyledLine />
+            </StyledLineWrapper>
+            {/* </Fade> */}
           </Wrapper>
-          <Fade>
-            <ImageWrapper>
-              <SecondImage src={ProfilePic} alt="profile" />
-            </ImageWrapper>
-          </Fade>
+          {/* <Fade> */}
+          <ImageWrapper>
+            <SecondImage src={ProfilePic} alt="profile" />
+          </ImageWrapper>
+          {/* </Fade> */}
         </Content>
       </Container>
     </>

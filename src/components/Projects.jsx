@@ -9,7 +9,7 @@ import bot from '../assets/images/chat-bot.png'
 import momento from '../assets/images/business-site.jpg'
 import styled from 'styled-components'
 import { ReactComponent as YellowLineHorizontal } from '../assets/images/YellowLineHorizontal.svg'
-import Fade from 'react-reveal/Fade'
+// import Fade from 'react-reveal/Fade'
 
 const Container = styled.div`
   display: flex;
@@ -54,35 +54,35 @@ const Text = styled.h2`
 const Projects = () => {
   return (
     <Container>
-      <Fade>
-        <StyledLine />
-        <CardWrapper>
-          {MainProjects.map((project) => (
-            <ProjectCardWithImage
-              key={`${project.name}-main`}
-              image={project.image}
-              name={project.name}
-              description={project.description}
-              allStackUsed={project.stack}
-              githubLink={project.githubLink}
-              deployedLink={project.deployedLink}
-            />
-          ))}
-        </CardWrapper>
-        <Text>Other Projects</Text>
-        <OtherProjectsCardWrapper>
-          {OtherProjects.map((project) => (
-            <ProjectCardWithImage
-              key={`${project.name}-other`}
-              name={project.name}
-              description={project.description}
-              allStackUsed={project.stack}
-              githubLink={project.link}
-              deployedLink={project.deployedLink}
-            />
-          ))}
-        </OtherProjectsCardWrapper>
-      </Fade>
+      {/* <Fade> */}
+      <StyledLine />
+      <CardWrapper>
+        {MainProjects.map((project) => (
+          <ProjectCardWithImage
+            key={`${project.name}-main`}
+            image={project.image}
+            name={project.name}
+            description={project.description}
+            allStackUsed={project.stack}
+            githubLink={project.githubLink}
+            deployedLink={project.deployedLink}
+          />
+        ))}
+      </CardWrapper>
+      <Text>Other Projects</Text>
+      <OtherProjectsCardWrapper>
+        {OtherProjects.map((project) => (
+          <ProjectCardWithImage
+            key={`${project.name}-other`}
+            name={project.name}
+            description={project.description}
+            allStackUsed={project.stack}
+            githubLink={project.link}
+            deployedLink={project.deployedLink}
+          />
+        ))}
+      </OtherProjectsCardWrapper>
+      {/* </Fade> */}
     </Container>
   )
 }

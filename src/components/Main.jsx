@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Fade from 'react-reveal/Fade'
+// import Fade from 'react-reveal/Fade'
 import { ReactComponent as YellowLine } from '../assets/images/YellowLine.svg'
 import SocialMedia from './SocialMedia'
 
@@ -52,18 +52,18 @@ const Main = () => {
   return (
     <Container>
       <Content>
-        <Fade left>
-          <Name>
-            Laima <br />
-            Duhovnaja
-          </Name>
-        </Fade>
-        <Fade bottom>
-          <Wrapper>
-            <StyledLine />
-            <Developer>frontend developer</Developer>
-          </Wrapper>
-        </Fade>
+        {/* <Fade left> */}
+        <Name>
+          Laima <br />
+          Duhovnaja
+        </Name>
+        {/* </Fade> */}
+        {/* <Fade bottom> */}
+        <Wrapper>
+          <StyledLine />
+          <Developer>frontend developer</Developer>
+        </Wrapper>
+        {/* </Fade> */}
       </Content>
       <SocialMedia />
     </Container>
